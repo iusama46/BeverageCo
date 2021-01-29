@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mad_final.MainActivity">
+
+    <item
+        android:id="@+id/web"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_web_24"
+        android:orderInCategory="100"
+        android:title="Add Item"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/add"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_add_box_24"
+        android:orderInCategory="100"
+        android:title="Add Item"
+        android:visible="true"
+        app:showAsAction="always" />
+
+
+</menu>
