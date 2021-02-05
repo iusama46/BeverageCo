@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 /**
  * Created by Ussama Iftikhar on 28-Jan-2021.
  * Email iusama46@gmail.com
@@ -18,7 +20,13 @@ public class SplashScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
+
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        if (auth.getCurrentUser() != null) {
+            startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
+        } else {
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+        }
         finish();
     }
 }
